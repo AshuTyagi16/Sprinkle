@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Sprinkle</string>
+
+    <string name="button">Button</string>
+
+    <!-- Category -->
+    <string name="category_all">All</string>
+    <string name="category_my_bookmarks">My Bookmarks</string>
+    <string name="category_ed_tech">Ed Tech</string>
+    <string name="category_machine_learning">Machine learning</string>
+    <string name="category_medical_tech">Medical Technology</string>
+    <string name="category_e_commerce">E-Commerce</string>
+
+    <string name="share_link">Checkout this product\n\nwww.jarvis.com/product?id=%d</string>
+</resources>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card_dark"
+    tools:layout_margin="4dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProduct"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/backgrounds/scenic" />
+
+    <com.sackcentury.shinebuttonlib.ShineButton
+        android:id="@+id/btnBookMark"
+        android:layout_width="30dp"
+        android:layout_height="40dp"
+        android:elevation="4dp"
+        app:allow_random_color="false"
+        app:btn_color="#90A4AE"
+        app:btn_fill_color="#FFD700"
+        app:layout_constraintEnd_toEndOf="@id/ivProduct"
+        app:layout_constraintTop_toTopOf="@id/ivProduct"
+        app:siShape="@drawable/ic_bookmark_active" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/ivProduct"
+        tools:text="@tools:sample/lorem/random" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:maxLines="3"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/btnUpVote"
+        app:layout_constraintEnd_toEndOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="@id/tvTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        tools:text="@tools:sample/lorem/random" />
+
+    <com.sackcentury.shinebuttonlib.ShineButton
+        android:id="@+id/btnUpVote"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:btn_color="#bcbcbc"
+        app:btn_fill_color="#3b9aee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription"
+        app:siShape="@drawable/ic_upvote_active" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNumUpVotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:maxLines="1"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/btnUpVote"
+        app:layout_constraintStart_toEndOf="@id/btnUpVote"
+        app:layout_constraintTop_toTopOf="@id/btnUpVote"
+        tools:text="345" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?attr/actionBarItemBackground"
+        android:src="@drawable/ic_share"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btnUpVote" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

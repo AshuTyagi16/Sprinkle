@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_dark"
+    tools:context=".ui.MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/placeholderNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/placeholder_no_internet"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:contentDescription="@string/button"
+        android:src="@drawable/ic_refresh"
+        app:backgroundTint="@color/category_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <HorizontalScrollView
+            android:id="@+id/hsvChips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleLine="true"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/category_all"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/category_all"
+                    android:textColor="@color/white"
+                    app:checkedIcon="@drawable/ic_checked"
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="@color/category_1"
+                    app:chipIconTint="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/category_bookmark"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_my_bookmarks"
+                    android:textColor="@color/white"
+                    app:checkedIcon="@drawable/ic_checked"
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="@color/category_2"
+                    app:chipIconTint="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/category_ed_tech"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_ed_tech"
+                    android:textColor="@color/white"
+                    app:checkedIcon="@drawable/ic_checked"
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="@color/category_3"
+                    app:chipIconTint="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/category_e_commerce"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_e_commerce"
+                    android:textColor="@color/white"
+                    app:checkedIcon="@drawable/ic_checked"
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="@color/category_4"
+                    app:chipIconTint="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/category_machine_learning"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_machine_learning"
+                    android:textColor="@color/white"
+                    app:checkedIcon="@drawable/ic_checked"
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="@color/category_5"
+                    app:chipIconTint="@color/white" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/category_medical_tech"
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/category_medical_tech"
+                    android:textColor="@color/white"
+                    app:checkedIcon="@drawable/ic_checked"
+                    app:checkedIconTint="@color/white"
+                    app:chipBackgroundColor="@color/category_6"
+                    app:chipIconTint="@color/white" />
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/placeholderNoResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/placeholder_no_result"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hsvChips" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProducts"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/hsvChips"
+            tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            tools:listitem="@layout/cell_product"
+            tools:orientation="vertical"
+            tools:spanCount="2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
