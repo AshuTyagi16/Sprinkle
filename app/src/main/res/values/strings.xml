@@ -12,4 +12,6 @@
     <string name="category_e_commerce">E-Commerce</string>
 
     <string name="share_link">Checkout this product\n\nwww.jarvis.com/product?id=%d</string>
+
+    <string name="internet_not_connected">Internet Not Connected</string>
 </resources>

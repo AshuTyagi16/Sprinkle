@@ -78,7 +78,6 @@ class MainActivity : DaggerAppCompatActivity(), OnProductClickListener {
 
     private var currentSpanCount = Constants.SPAN_COUNT
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -124,7 +123,7 @@ class MainActivity : DaggerAppCompatActivity(), OnProductClickListener {
                 if (networkUtil.isNetworkAvailable())
                     mainActivityViewModel.reload()
                 else
-                    showToast("Internet Not Connected")
+                    showToast(getString(R.string.internet_not_connected))
             else
                 updateSpanCount()
         }
@@ -143,8 +142,8 @@ class MainActivity : DaggerAppCompatActivity(), OnProductClickListener {
                 }
                 Result.Status.SUCCESS -> {
                     binding.placeholderNoInternet.hide()
-                    binding.progressBar.hide()
                     binding.clData.show()
+                    binding.progressBar.hide()
                     if (!it.data.isNullOrEmpty()) {
                         binding.placeholderNoResult.hide()
                         binding.rvProducts.show()
@@ -154,7 +153,6 @@ class MainActivity : DaggerAppCompatActivity(), OnProductClickListener {
                         images = it.data.map { it.image }
                     } else {
                         binding.rvProducts.hide()
-                        binding.placeholderNoResult.show()
                     }
                 }
                 Result.Status.ERROR -> {
